@@ -13,7 +13,7 @@ The following terms translate as follows
     same -> \u2261
     not -> ~
 when
-- The line starts with @@.
+- The line contains a @@.
 - The term has a period right before it.
 - The term is between @start and @end markers.
 
@@ -26,7 +26,7 @@ turns into a row for a table like this:
     |T|F|F|T|F|T|F|
 
 ## Example
-    # Test Markdown
+    # My Homework
     
     ## 1.1 - Individual
     
