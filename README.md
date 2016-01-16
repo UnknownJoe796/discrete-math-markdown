@@ -3,7 +3,7 @@ A specialized markdown to PDF program.
 
 ## Downloading and Using
 
-Download [CurrentVersion.zip](CurrentVersion.zip) and extract it.
+Download [CurrentVersion.zip](https://github.com/UnknownJoe796/discrete-math-markdown/raw/master/CurrentVersion.zip) and extract it.
 Find and open the "bin" folder.
 Put the files you want to run it through in there - they can be either Markdown (.md) or plain text (.txt) files.
 Run the batch file (if on Windows, don't know about other OSes).
