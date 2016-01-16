@@ -1,7 +1,7 @@
 # discrete-math-markdown
 A specialized markdown to PDF program.
 
-Supports almost everything in [here][https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet].
+Supports almost everything in https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
 
 In addition, for Discrete Mathematics, the following things are included:
 
