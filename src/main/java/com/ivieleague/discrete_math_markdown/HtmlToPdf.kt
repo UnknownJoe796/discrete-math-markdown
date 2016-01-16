@@ -4,10 +4,8 @@ import org.xhtmlrenderer.pdf.ITextOutputDevice
 import org.xhtmlrenderer.pdf.ITextRenderer
 import org.xhtmlrenderer.pdf.ITextUserAgent
 import org.xhtmlrenderer.resource.XMLResource
-import org.xml.sax.InputSource
 import java.io.*
 import java.nio.file.Files
-import java.nio.file.Path
 import java.nio.file.Paths
 
 /**
@@ -17,7 +15,7 @@ public object HtmlToPdf{
     val fontPath = "font.ttf"
     fun convert(htmlFile: File, pdfOut: OutputStream){
         try {
-            if(Files.exists(Paths.get(fontPath))) {
+            if (!Files.exists(Paths.get(fontPath))) {
                 Files.copy(
                         ClassLoader.getSystemClassLoader().getResourceAsStream("LucidaSansUnicodeRegular.ttf"),
                         Paths.get(fontPath))
