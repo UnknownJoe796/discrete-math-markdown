@@ -67,3 +67,76 @@ turns into a row for a table like this:
     @truthRow TFFTTFFT
     @truthRow FTFTTFFT
     @truthRow FFFFTTTT
+
+becomes:
+<h1><a href="#test-markdown" name="test-markdown">Test Markdown</a></h1>
+<h2>1.1 - Individual</h2>
+<pre><code>p ⇔ q ∧ c
+</code></pre>
+<h2>1.2 - Line</h2>
+<pre><code> ~ a ∨ b ⇒ c
+ a ≡ c
+</code></pre>
+<h2>1.3 - Start / Stop</h2>
+<pre><code> ~ a ∨ b ⇒ c
+a ≡ c
+p ⇔ q ∧ c
+This is not processed, even if it has special terms and stuff
+</code></pre>
+<h2>1.4 - Table</h2>
+<table>
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p ∧ q</th>
+      <th>p ∨ q</th>
+      <th>~(p ∧ q)</th>
+      <th>~(p ∨ q)</th>
+      <th>~p ∧ ~q</th>
+      <th>~p ∨ ~q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
