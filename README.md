@@ -1,6 +1,17 @@
 # discrete-math-markdown
 A specialized markdown to PDF program.
 
+## Downloading and Using
+
+Download [CurrentVersion.zip] and extract it.
+Find and open the "bin" folder.
+Put the files you want to run it through in there - they can be either Markdown (.md) or plain text (.txt) files.
+Run the batch file (if on Windows, don't know about other OSes).
+
+If you want an example file to use, try [executable/test.md].
+
+## What you can do
+
 Supports almost everything in https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
 
 In addition, for Discrete Mathematics, the following things are included:
