@@ -1,5 +1,9 @@
 # discrete-math-markdown
-A specialized markdown to PDF program.
+A specialized version of Markdown to PDF program.
+
+This program takes your homework (in a special Markdown file, decribed below) and turns it into a decent-looking PDF.
+
+What is Markdown?  You can see a good example [here](https://en.wikipedia.org/wiki/Markdown#Example).  Basically, it makes it easy to write simple files that look pretty when you run them through a program.  This program has a couple of extensions on it to make it easy to use for our Discrete Mathematics class at Utah State University.
 
 ## Downloading and Using
 
@@ -8,11 +12,11 @@ Find and open the "bin" folder.
 Put the files you want to run it through in there - they can be either Markdown (.md) or plain text (.txt) files.
 Run the batch file (if on Windows, don't know about other OSes).
 
-If you want an example file to use, try [executable/test.md](executable/test.md).
+If you want an example file to use, try [executable/test.md](executable/test.md).  It should help you a bit in understanding the format.
 
 ## What you can do
 
-Supports almost everything in https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
+This program supports almost everything in https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
 
 In addition, for Discrete Mathematics, the following things are included:
 
