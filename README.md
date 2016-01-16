@@ -22,11 +22,11 @@ In addition, for Discrete Mathematics, the following things are included:
 
 The following terms translate as follows
 
-    if -> \u21D2
-    iff -> \u21D4
-    and -> \u2227
-    or -> \u2228
-    same -> \u2261
+    if -> ⇒
+    iff -> ⇔
+    and -> ∧
+    or -> ∨
+    same -> ≡
     not -> ~
     
 when
