@@ -67,8 +67,9 @@ turns into a row for a table like this:
     @truthRow TFFTTFFT
     @truthRow FTFTTFFT
     @truthRow FFFFTTTT
-
-becomes:
+---
+### becomes:
+---
 <h1><a href="#test-markdown" name="test-markdown">Test Markdown</a></h1>
 <h2>1.1 - Individual</h2>
 <pre><code>p ⇔ q ∧ c
