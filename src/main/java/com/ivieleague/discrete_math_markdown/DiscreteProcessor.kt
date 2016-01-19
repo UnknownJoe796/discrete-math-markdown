@@ -16,7 +16,8 @@ public object DiscreteProcessor {
     val table: HashMap<String, String> = HashMap()
 
     init {
-        table["if"] = "\u21D2"
+        table["then"] = "\u21D2"
+        table["if"] = "\u21D0"
         table["iff"] = "\u21D4"
         table["and"] = "\u2227"
         table["or"] = "\u2228"

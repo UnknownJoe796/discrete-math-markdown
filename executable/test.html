@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -664,32 +664,25 @@ body {
 }</style>
 </head>
 <body><div class="markdown-body">
-<h1><a href="#test-markdown" name="test-markdown">Test Markdown</a></h1>
-<h2>1.1 - Individual</h2>
-<pre><code>p ⇔ q ∧ c
+  <h1><a href="#homework-one" name="homework-one">Homework One</a></h1>
+  <p>Joseph Ivie - A01517220</p>
+  <h2>1.1</h2>
+  <p>A, b, and c are propositions (though &ldquo;she&rdquo; is not explicitly defined in b). D is not a proposition.</p>
+  <h2>1.2</h2>
+<pre><code>p ~ q
 </code></pre>
-<h2>1.2 - Line</h2>
-<pre><code> ~ a ∨ b ⇒ c
- a ≡ c
-</code></pre>
-<h2>1.3 - Start / Stop</h2>
-<pre><code> ~ a ∨ b ⇒ c
-a ≡ c
-p ⇔ q ∧ c
-This is not processed, even if it has special terms and stuff
-</code></pre>
-<h2>1.4 - Table</h2>
+  <h2>1.4</h2>
 <table>
   <thead>
     <tr>
       <th>p</th>
       <th>q</th>
-      <th>p ∧ q</th>
-      <th>p ∨ q</th>
-      <th>~(p ∧ q)</th>
-      <th>~(p ∨ q)</th>
-      <th>~p ∧ ~q</th>
-      <th>~p ∨ ~q</th>
+      <th>r</th>
+      <th>~ p ∨ q</th>
+      <th>q ∧ ~ r</th>
+      <th>p ∨ (~ p ∨ q)</th>
+      <th>~(q ∧ ~ r)</th>
+      <th>(p ∨ (~ p ∨ q)) ∧ (~(q ∧ ~ r))</th>
     </tr>
   </thead>
   <tbody>
@@ -699,18 +692,48 @@ This is not processed, even if it has special terms and stuff
       <td>T</td>
       <td>T</td>
       <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>T</td>
       <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
       <td>F</td>
       <td>F</td>
     </tr>
     <tr>
       <td>T</td>
       <td>F</td>
-      <td>F</td>
-      <td>T</td>
       <td>T</td>
       <td>F</td>
       <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
       <td>T</td>
     </tr>
     <tr>
@@ -719,21 +742,35 @@ This is not processed, even if it has special terms and stuff
       <td>F</td>
       <td>T</td>
       <td>T</td>
+      <td>T</td>
       <td>F</td>
       <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
       <td>T</td>
     </tr>
     <tr>
       <td>F</td>
       <td>F</td>
       <td>F</td>
-      <td>F</td>
       <td>T</td>
+      <td>F</td>
       <td>T</td>
       <td>T</td>
       <td>T</td>
     </tr>
   </tbody>
-</table></div>
+</table>
+  <h2>1.8</h2>
+  <p>There are no logical errors in the first ten lines of the program and it is being run with a complete data set.</p>
+  <h2>1.9</h2>
+  <p>The dollar is not at an all-time high or the stock is not at an all-time low.</p></div>
 </body>
 </html>

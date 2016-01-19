@@ -14,13 +14,9 @@ fun main(vararg args: String) {
         println("Outputs a PDF file for assignments.")
         println("-t = Testing mode, output markdown changes to console")
         println("Usage: dismaark <input file>")
-        for (path in File(".").list()) {
-            println(path)
-            if (path.endsWith(".txt"))
-                fullRun(path, false)
-            else if (path.endsWith(".md"))
-                fullRun(path, false)
-        }
+        runOnAll(false)
+    } else if (args.size == 1 && args[0] == "-t") {
+        runOnAll(true)
     } else {
         var testMode = false
         var inFile = ""
@@ -36,6 +32,16 @@ fun main(vararg args: String) {
         }
 
         fullRun(inFile, testMode)
+    }
+}
+
+private fun runOnAll(verbose: Boolean) {
+    for (path in File(".").list()) {
+        println(path)
+        if (path.endsWith(".txt"))
+            fullRun(path, verbose)
+        else if (path.endsWith(".md"))
+            fullRun(path, verbose)
     }
 }
 

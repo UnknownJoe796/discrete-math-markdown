@@ -1,28 +1,33 @@
-@singleMarker(@)
+# Homework One
 
-# Test Markdown
+Joseph Ivie - A01517220
 
-## 1.1 - Individual
+## 1.1
 
-    p @iff q @and c
+A, b, and c are propositions (though "she" is not explicitly defined in b).  D is not a proposition.
 
-## 1.2 - Line
+## 1.2
 
-    @@ not a or b if c
-    @@ a same c
+    @@p not q
 
-## 1.3 - Start / Stop
+## 1.4
 
-    @start not a or b if c
-    a same c
-    p iff q and c@end
-    This is not processed, even if it has special terms and stuff
+@@|p|q|r|not p or q|q and not r|p or (not p or q)|not(q and not r)|(p or (not p or q)) and (not(q and not r))|
+|-|-|-|-|-|-|-|-|
+@truthRow TTTTFTTT
+@truthRow TTFTTTFF
+@truthRow TFTFFTTT
+@truthRow TFFFFTTT
+@truthRow FTTTFTTT
+@truthRow FTFTTTFF
+@truthRow FFTTFTTT
+@truthRow FFFTFTTT
 
-## 1.4 - Table
+## 1.8
 
-|p|q|p and q|p or q|not(p and q)|not(p or q)|notp and notq|notp or notq|@@
-|-|-|-------|------|------------|-----------|-------------|------------|
-@truthRow TTTTFFFF
-@truthRow TFFTTFFT
-@truthRow FTFTTFFT
-@truthRow FFFFTTTT
+There are no logical errors in the first ten lines of the program and it is being run with a complete data set.
+
+## 1.9
+
+The dollar is not at an all-time high or the stock is not at an all-time low.
+
