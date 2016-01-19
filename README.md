@@ -1,7 +1,7 @@
 # discrete-math-markdown
 A specialized version of Markdown to PDF program.
 
-This program takes your homework (in a special Markdown file, decribed below) and turns it into a decent-looking PDF.
+This program takes your homework (in a special Markdown file, described below) and turns it into a decent-looking PDF.
 
 What is Markdown?  You can see a good example [here](https://en.wikipedia.org/wiki/Markdown#Example).  Basically, it makes it easy to write simple files that look pretty when you run them through a program.  This program has a couple of extensions on it to make it easy to use for our Discrete Mathematics class at Utah State University.
 
@@ -22,6 +22,7 @@ In addition, for Discrete Mathematics, the following things are included:
 
 The following terms translate as follows
 
+    if -> ⇒
     if -> ⇒
     iff -> ⇔
     and -> ∧

@@ -16,13 +16,12 @@ fun main(args: Array<String>) {
             { it[0] },
             { it[1] },
             { it[2] },
-            { it[0] lif it[2] },
-            { it[1] lif it[2] },
-            { (it[0] lif it[2]) == (it[1] lif it[2]) }
+            { it[0] or (it[1] and it[2]) },
+            { (it[0] or it[1]) and (it[0] or it[2]) }
     )
 }
 
-infix fun Boolean.lif(other: Boolean): Boolean {
+infix fun Boolean.then(other: Boolean): Boolean {
     return !(this and !other)
 }
 
