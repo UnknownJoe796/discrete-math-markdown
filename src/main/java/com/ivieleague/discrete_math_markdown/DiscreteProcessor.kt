@@ -16,13 +16,24 @@ public object DiscreteProcessor {
     val table: HashMap<String, String> = HashMap()
 
     init {
+        table["not in"] = "\u2209"
+        table["that"] = ":"
+        table["real numbers"] = "\u211D"
+        table["natural numbers"] = "\u2115"
+        table["all integers"] = "\u2124"
+
+        table["not"] = "~"
         table["then"] = "\u21D2"
         table["if"] = "\u21D0"
         table["iff"] = "\u21D4"
         table["and"] = "\u2227"
         table["or"] = "\u2228"
+        table["xor"] = "\u22BB"
         table["same"] = "\u2261"
-        table["not"] = "~"
+        table["therefore"] = "\u2234"
+        table["exists"] = "\u2203"
+        table["all"] = "\u2200"
+        table["in"] = "\u2208"
     }
 
     fun process(input: String): String {
@@ -104,7 +115,7 @@ public object DiscreteProcessor {
     fun processAny(input: String): String {
         var current = input
         for ((key, value) in table) {
-            current = current.replace(key, value)
+            current = current.replace(("([^a-zA-Z])$key([^a-zA-Z])").toRegex(), "$1$value$2")
         }
         return current
     }
