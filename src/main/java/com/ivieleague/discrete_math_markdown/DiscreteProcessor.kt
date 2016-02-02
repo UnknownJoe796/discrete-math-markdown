@@ -8,9 +8,9 @@ import java.util.*
 public object DiscreteProcessor {
 
     var lineMarker: String = "@@"
-    var startMarker: String = "@start"
-    var endMarker: String = "@end"
-    var singleMarker: String = "."
+    var startMarker: String = "@{"
+    var endMarker: String = "}"
+    var singleMarker: String = "\\."
     var truthRowMarker: String = "@truthRow"
 
     val table: HashMap<String, String> = HashMap()
@@ -34,6 +34,16 @@ public object DiscreteProcessor {
         table["exists"] = "\u2203"
         table["all"] = "\u2200"
         table["in"] = "\u2208"
+
+        table["!="] = "\u2260"
+        table[">="] = "\u2265"
+        table["<="] = "\u2264"
+        table[" ?\\^ ?2"] = "\u00B2"
+        table[" ?\\^ ?3"] = "\u00B3"
+        table[" ?\\^ ?4"] = "\u00B4"
+        table[" \\* "] = "\u22C5"
+        table["/"] = "\u00F7"
+        table["sqrt"] = "\u221A"
     }
 
     fun process(input: String): String {
@@ -74,7 +84,7 @@ public object DiscreteProcessor {
 
     fun processLine(input: String): String {
         return input.split('\n').map {
-            if (it.contains(lineMarker)) processAny(it.replace(lineMarker, ""))
+            if (it.contains(lineMarker)) processAny(" ".plus(it).replace(lineMarker, ""))
             else it
         }.joinToString("\n")
     }
@@ -84,7 +94,7 @@ public object DiscreteProcessor {
             val inners = it.split(endMarker)
 
             if (inners.size > 1)
-                processAny(inners[0]) + inners.subList(1, inners.size).joinToString("")
+                processAny(" " + inners[0]) + inners.subList(1, inners.size).joinToString("")
             else
                 it
         }.joinToString("")
@@ -93,7 +103,7 @@ public object DiscreteProcessor {
     fun processSingle(input: String): String {
         var current = input
         for ((key, value) in table) {
-            current = current.replace(singleMarker + key, value)
+            current = current.replace((singleMarker + key).toRegex(), value)
         }
         return current
     }
@@ -114,8 +124,14 @@ public object DiscreteProcessor {
 
     fun processAny(input: String): String {
         var current = input
+        current = current.replace("([ \\(||{\\[\\*+/-\\^,])([a-zA-Z])([ \\)||}\\]\\*+/-\\^,])".toRegex(), "$1 *$2* $3")
         for ((key, value) in table) {
-            current = current.replace(("([^a-zA-Z])$key([^a-zA-Z])").toRegex(), "$1$value$2")
+            val count = value.count { it == '$' }
+            val replaceVal = "$1" + value.replace("$3", "$4").replace("$2", "$3").replace("$1", "$2") + "$" + (count + 2).toString()
+            current = current.replace(("([^a-zA-Z])$key([^a-zA-Z])").toRegex(), replaceVal)
+        }
+        current = current.replace("\\[([0-9]+)\\]".toRegex()) {
+            it.groups[0]!!.value.map { it - 0x30 + 0x2080 }.joinToString()
         }
         return current
     }
