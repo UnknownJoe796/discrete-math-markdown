@@ -22,13 +22,23 @@ In addition, for Discrete Mathematics, the following things are included:
 
 The following terms translate as follows
 
-    if -> ⇒
-    if -> ⇒
+    then -> ⇒
+    if -> reversed ⇒
     iff -> ⇔
     and -> ∧
     or -> ∨
     same -> ≡
     not -> ~
+    xor -> 
+    therefore -> ∴
+    exists -> ∃
+    all -> ∀
+    in -> ∈
+    not in -> ∈ with vertical bar through it
+    that -> :
+    real numbers -> ℝ
+    all integers -> ℤ
+    natural numbers -> ℕ
     
 when
 - The line contains a @@.
